@@ -1,0 +1,63 @@
+VOICE UBUNTU NLP v6 — FINAL VALIDATION REPORT
+UTC timestamp: 2026-10-12T17:27:33.633788+00:00
+Training rows: 1348
+Intent classes: 15
+
+INDEPENDENT EVALUATION
+Rows: 40
+Exact normalized overlap with training data: 0
+Accuracy: 1.0000
+Macro F1: 1.0000
+Weighted F1: 1.0000
+                precision    recall  f1-score   support
+
+ CHANGE_VOLUME       1.00      1.00      1.00         2
+     CLOSE_APP       1.00      1.00      1.00         3
+ CREATE_FOLDER       1.00      1.00      1.00         2
+       GET_CPU       1.00      1.00      1.00         2
+      GET_DISK       1.00      1.00      1.00         2
+       GET_RAM       1.00      1.00      1.00         2
+   LOCK_SCREEN       1.00      1.00      1.00         2
+      OPEN_APP       1.00      1.00      1.00         4
+   OPEN_FOLDER       1.00      1.00      1.00         3
+  OPEN_YOUTUBE       1.00      1.00      1.00         2
+    PLAY_MEDIA       1.00      1.00      1.00         3
+   SEARCH_FILE       1.00      1.00      1.00         5
+SEARCH_YOUTUBE       1.00      1.00      1.00         4
+      SHUTDOWN       1.00      1.00      1.00         2
+       UNKNOWN       1.00      1.00      1.00         2
+
+      accuracy                           1.00        40
+     macro avg       1.00      1.00      1.00        40
+  weighted avg       1.00      1.00      1.00        40
+
+
+PARSER SMOKE TESTS
+PASS | English YouTube search | expected=SEARCH_YOUTUBE | actual=['SEARCH_YOUTUBE']
+PASS | Arabic YouTube search | expected=SEARCH_YOUTUBE | actual=['SEARCH_YOUTUBE']
+PASS | Egyptian Arabic open YouTube | expected=OPEN_YOUTUBE | actual=['OPEN_YOUTUBE']
+PASS | Local movie playback | expected=PLAY_MEDIA | actual=['PLAY_MEDIA']
+PASS | Arabic local song playback | expected=PLAY_MEDIA | actual=['PLAY_MEDIA']
+PASS | Explicit YouTube playback search | expected=SEARCH_YOUTUBE | actual=['SEARCH_YOUTUBE']
+PASS | File target extraction | expected=SEARCH_FILE | actual=['SEARCH_FILE']
+PASS | Folder target extraction | expected=CREATE_FOLDER | actual=['CREATE_FOLDER']
+PASS | Folder parent extraction | expected=CREATE_FOLDER | actual=['CREATE_FOLDER']
+PASS | Missing folder name clarification | expected=CREATE_FOLDER | actual=['CREATE_FOLDER']
+PASS | Unsupported request | expected=UNKNOWN | actual=['UNKNOWN']
+PASS | Compound command | expected=OPEN_APP | actual=['OPEN_APP', 'SEARCH_YOUTUBE']
+
+YOUTUBE URL ROUND-TRIP TESTS
+PASS | rock and roll
+PASS | C++ pointers and references
+PASS | Linux; permissions & ownership
+PASS | شرح التفاضل والتكامل
+PASS | مقارنة بين SQL و Python
+PASS | café & crème brûlée
+
+LIMITATIONS
+The independent evaluation contains 40 manually curated text commands, not independently collected microphone transcripts.
+A random row split may be optimistic because template-generated phrases can share structure.
+Firefox application data are mocked in parser smoke tests.
+No Ubuntu operation or shell command is executed by this evaluator.
+
+The model returns structured intent data only. The security component must validate every action before the Ubuntu action component executes it.

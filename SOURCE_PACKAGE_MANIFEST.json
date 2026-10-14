@@ -1,0 +1,9 @@
+{
+  "package": "Voice Ubuntu NLP v6 source package",
+  "purpose": "Upload to My Drive/VoiceUbuntuNLP as Voice_Ubuntu_NLP_v6_SOURCE.zip. Then open the Colab train/test/export notebook and Run all.",
+  "training_examples": 1348,
+  "intent_count": 15,
+  "trained_model": "voice_ubuntu_intent_model.joblib",
+  "training_commands": "python prepare_training_data.py; python train_model.py",
+  "test_commands": "python -m pytest -q; python evaluate_model_v6.py"
+}

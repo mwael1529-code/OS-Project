@@ -1,0 +1,986 @@
+{
+  "project": "Voice Ubuntu NLP",
+  "version": "v6",
+  "timestamp_utc": "2026-10-12T17:27:33.633788+00:00",
+  "training_rows": 1348,
+  "training_intents": 15,
+  "independent_eval": {
+    "n_examples": 40,
+    "exact_normalized_training_overlap": 0,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "classification_report": "                precision    recall  f1-score   support\n\n CHANGE_VOLUME       1.00      1.00      1.00         2\n     CLOSE_APP       1.00      1.00      1.00         3\n CREATE_FOLDER       1.00      1.00      1.00         2\n       GET_CPU       1.00      1.00      1.00         2\n      GET_DISK       1.00      1.00      1.00         2\n       GET_RAM       1.00      1.00      1.00         2\n   LOCK_SCREEN       1.00      1.00      1.00         2\n      OPEN_APP       1.00      1.00      1.00         4\n   OPEN_FOLDER       1.00      1.00      1.00         3\n  OPEN_YOUTUBE       1.00      1.00      1.00         2\n    PLAY_MEDIA       1.00      1.00      1.00         3\n   SEARCH_FILE       1.00      1.00      1.00         5\nSEARCH_YOUTUBE       1.00      1.00      1.00         4\n      SHUTDOWN       1.00      1.00      1.00         2\n       UNKNOWN       1.00      1.00      1.00         2\n\n      accuracy                           1.00        40\n     macro avg       1.00      1.00      1.00        40\n  weighted avg       1.00      1.00      1.00        40\n",
+    "confusion_matrix_labels": [
+      "CHANGE_VOLUME",
+      "CLOSE_APP",
+      "CREATE_FOLDER",
+      "GET_CPU",
+      "GET_DISK",
+      "GET_RAM",
+      "LOCK_SCREEN",
+      "OPEN_APP",
+      "OPEN_FOLDER",
+      "OPEN_YOUTUBE",
+      "PLAY_MEDIA",
+      "SEARCH_FILE",
+      "SEARCH_YOUTUBE",
+      "SHUTDOWN",
+      "UNKNOWN"
+    ],
+    "rows": [
+      {
+        "text": "Please bring up the browser",
+        "expected": "OPEN_APP",
+        "actual": "OPEN_APP",
+        "score": 0.553,
+        "passed": true
+      },
+      {
+        "text": "Could you start the calculator application?",
+        "expected": "OPEN_APP",
+        "actual": "OPEN_APP",
+        "score": 0.8723,
+        "passed": true
+      },
+      {
+        "text": "ممكن تفتح مدير الملفات",
+        "expected": "OPEN_APP",
+        "actual": "OPEN_APP",
+        "score": 0.6549,
+        "passed": true
+      },
+      {
+        "text": "افتح برنامج عرض الصور",
+        "expected": "OPEN_APP",
+        "actual": "OPEN_APP",
+        "score": 0.6178,
+        "passed": true
+      },
+      {
+        "text": "Please exit the application",
+        "expected": "CLOSE_APP",
+        "actual": "CLOSE_APP",
+        "score": 0.7011,
+        "passed": true
+      },
+      {
+        "text": "ممكن تقفل فايرفوكس من فضلك",
+        "expected": "CLOSE_APP",
+        "actual": "CLOSE_APP",
+        "score": 0.6406,
+        "passed": true
+      },
+      {
+        "text": "Quit the text editor for me",
+        "expected": "CLOSE_APP",
+        "actual": "CLOSE_APP",
+        "score": 0.8984,
+        "passed": true
+      },
+      {
+        "text": "وريني مجلد المستندات",
+        "expected": "OPEN_FOLDER",
+        "actual": "OPEN_FOLDER",
+        "score": 0.6975,
+        "passed": true
+      },
+      {
+        "text": "Take me to the Pictures folder",
+        "expected": "OPEN_FOLDER",
+        "actual": "OPEN_FOLDER",
+        "score": 0.9587,
+        "passed": true
+      },
+      {
+        "text": "افتح فولدر التنزيلات",
+        "expected": "OPEN_FOLDER",
+        "actual": "OPEN_FOLDER",
+        "score": 0.8572,
+        "passed": true
+      },
+      {
+        "text": "Could you locate the thesis document?",
+        "expected": "SEARCH_FILE",
+        "actual": "SEARCH_FILE",
+        "score": 0.5272,
+        "passed": true
+      },
+      {
+        "text": "Look up the annual report file",
+        "expected": "SEARCH_FILE",
+        "actual": "SEARCH_FILE",
+        "score": 0.552,
+        "passed": true
+      },
+      {
+        "text": "ممكن تدورلي على ملف الورد",
+        "expected": "SEARCH_FILE",
+        "actual": "SEARCH_FILE",
+        "score": 0.7233,
+        "passed": true
+      },
+      {
+        "text": "فين ملف الداشبورد",
+        "expected": "SEARCH_FILE",
+        "actual": "SEARCH_FILE",
+        "score": 0.8844,
+        "passed": true
+      },
+      {
+        "text": "What is the current processor load?",
+        "expected": "GET_CPU",
+        "actual": "GET_CPU",
+        "score": 0.9276,
+        "passed": true
+      },
+      {
+        "text": "اعرض ضغط المعالج",
+        "expected": "GET_CPU",
+        "actual": "GET_CPU",
+        "score": 0.8929,
+        "passed": true
+      },
+      {
+        "text": "Show available memory",
+        "expected": "GET_RAM",
+        "actual": "GET_RAM",
+        "score": 0.9183,
+        "passed": true
+      },
+      {
+        "text": "الرام المتاحة كام",
+        "expected": "GET_RAM",
+        "actual": "GET_RAM",
+        "score": 0.8052,
+        "passed": true
+      },
+      {
+        "text": "How much space is unused on the drive?",
+        "expected": "GET_DISK",
+        "actual": "GET_DISK",
+        "score": 0.822,
+        "passed": true
+      },
+      {
+        "text": "فاضل كام مساحة على القرص",
+        "expected": "GET_DISK",
+        "actual": "GET_DISK",
+        "score": 0.8992,
+        "passed": true
+      },
+      {
+        "text": "Please reduce the sound level",
+        "expected": "CHANGE_VOLUME",
+        "actual": "CHANGE_VOLUME",
+        "score": 0.8264,
+        "passed": true
+      },
+      {
+        "text": "اكتم صوت السماعة",
+        "expected": "CHANGE_VOLUME",
+        "actual": "CHANGE_VOLUME",
+        "score": 0.7038,
+        "passed": true
+      },
+      {
+        "text": "Secure my current screen",
+        "expected": "LOCK_SCREEN",
+        "actual": "LOCK_SCREEN",
+        "score": 0.7735,
+        "passed": true
+      },
+      {
+        "text": "ممكن تعمل قفل للسيشن",
+        "expected": "LOCK_SCREEN",
+        "actual": "LOCK_SCREEN",
+        "score": 0.5567,
+        "passed": true
+      },
+      {
+        "text": "Turn the laptop off",
+        "expected": "SHUTDOWN",
+        "actual": "SHUTDOWN",
+        "score": 0.8839,
+        "passed": true
+      },
+      {
+        "text": "اطفي الجهاز تماما دلوقتي",
+        "expected": "SHUTDOWN",
+        "actual": "SHUTDOWN",
+        "score": 0.7272,
+        "passed": true
+      },
+      {
+        "text": "Create a folder called Semester 4",
+        "expected": "CREATE_FOLDER",
+        "actual": "CREATE_FOLDER",
+        "score": 0.9483,
+        "passed": true
+      },
+      {
+        "text": "اعمل مجلد باسم التخرج",
+        "expected": "CREATE_FOLDER",
+        "actual": "CREATE_FOLDER",
+        "score": 0.8885,
+        "passed": true
+      },
+      {
+        "text": "Would you open YouTube for me?",
+        "expected": "OPEN_YOUTUBE",
+        "actual": "OPEN_YOUTUBE",
+        "score": 0.7688,
+        "passed": true
+      },
+      {
+        "text": "ممكن توديني لصفحة اليوتيوب",
+        "expected": "OPEN_YOUTUBE",
+        "actual": "OPEN_YOUTUBE",
+        "score": 0.842,
+        "passed": true
+      },
+      {
+        "text": "Play the movie Interstellar from my collection",
+        "expected": "PLAY_MEDIA",
+        "actual": "PLAY_MEDIA",
+        "score": 0.952,
+        "passed": true
+      },
+      {
+        "text": "شغل الفيلم المحفوظ عندي",
+        "expected": "PLAY_MEDIA",
+        "actual": "PLAY_MEDIA",
+        "score": 0.8391,
+        "passed": true
+      },
+      {
+        "text": "Search YouTube for a tutorial on SQL window functions",
+        "expected": "SEARCH_YOUTUBE",
+        "actual": "SEARCH_YOUTUBE",
+        "score": 0.954,
+        "passed": true
+      },
+      {
+        "text": "ابحث على يوتيوب عن شرح الاحتمال الشرطي",
+        "expected": "SEARCH_YOUTUBE",
+        "actual": "SEARCH_YOUTUBE",
+        "score": 0.9732,
+        "passed": true
+      },
+      {
+        "text": "Find my notes file",
+        "expected": "SEARCH_FILE",
+        "actual": "SEARCH_FILE",
+        "score": 0.9543,
+        "passed": true
+      },
+      {
+        "text": "What is the weather tomorrow?",
+        "expected": "UNKNOWN",
+        "actual": "UNKNOWN",
+        "score": 0.8293,
+        "passed": true
+      },
+      {
+        "text": "اكتبلي قصة قصيرة",
+        "expected": "UNKNOWN",
+        "actual": "UNKNOWN",
+        "score": 0.7412,
+        "passed": true
+      },
+      {
+        "text": "Play the song Tamally Maak from my local music folder",
+        "expected": "PLAY_MEDIA",
+        "actual": "PLAY_MEDIA",
+        "score": 0.9537,
+        "passed": true
+      },
+      {
+        "text": "Search YouTube for rock and roll guitar lessons",
+        "expected": "SEARCH_YOUTUBE",
+        "actual": "SEARCH_YOUTUBE",
+        "score": 0.8872,
+        "passed": true
+      },
+      {
+        "text": "Open YouTube and search for Markov chains",
+        "expected": "SEARCH_YOUTUBE",
+        "actual": "SEARCH_YOUTUBE",
+        "score": 0.7357,
+        "passed": true
+      }
+    ],
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    ]
+  },
+  "independent_eval_all_correct": true,
+  "parser_smoke_tests": [
+    {
+      "name": "English YouTube search",
+      "input": "Search YouTube for Python tutorials",
+      "expected_intent": "SEARCH_YOUTUBE",
+      "actual_intents": [
+        "SEARCH_YOUTUBE"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Search YouTube for Python tutorials",
+        "actions": [
+          {
+            "text": "Search YouTube for Python tutorials",
+            "intent": "SEARCH_YOUTUBE",
+            "candidate_intent": "SEARCH_YOUTUBE",
+            "score": 1.0,
+            "margin": null,
+            "source": "rule",
+            "status": "ok",
+            "entities": {
+              "query": "Python tutorials",
+              "browser": "firefox",
+              "url": "https://www.youtube.com/results?search_query=Python+tutorials"
+            },
+            "message": "Open Firefox to YouTube search results; the user selects the desired result."
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Arabic YouTube search",
+      "input": "ابحث على يوتيوب عن شرح التفاضل",
+      "expected_intent": "SEARCH_YOUTUBE",
+      "actual_intents": [
+        "SEARCH_YOUTUBE"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "ابحث على يوتيوب عن شرح التفاضل",
+        "actions": [
+          {
+            "text": "ابحث على يوتيوب عن شرح التفاضل",
+            "intent": "SEARCH_YOUTUBE",
+            "candidate_intent": "SEARCH_YOUTUBE",
+            "score": 1.0,
+            "margin": null,
+            "source": "rule",
+            "status": "ok",
+            "entities": {
+              "query": "شرح التفاضل",
+              "browser": "firefox",
+              "url": "https://www.youtube.com/results?search_query=%D8%B4%D8%B1%D8%AD+%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B6%D9%84"
+            },
+            "message": "Open Firefox to YouTube search results; the user selects the desired result."
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Egyptian Arabic open YouTube",
+      "input": "ممكن تفتح يوتيوب",
+      "expected_intent": "OPEN_YOUTUBE",
+      "actual_intents": [
+        "OPEN_YOUTUBE"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "ممكن تفتح يوتيوب",
+        "actions": [
+          {
+            "text": "ممكن تفتح يوتيوب",
+            "intent": "OPEN_YOUTUBE",
+            "candidate_intent": "OPEN_YOUTUBE",
+            "score": 1.0,
+            "margin": null,
+            "source": "rule",
+            "status": "ok",
+            "entities": {
+              "browser": "firefox",
+              "url": "https://www.youtube.com/"
+            }
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Local movie playback",
+      "input": "Play Interstellar",
+      "expected_intent": "PLAY_MEDIA",
+      "actual_intents": [
+        "PLAY_MEDIA"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Play Interstellar",
+        "actions": [
+          {
+            "text": "Play Interstellar",
+            "intent": "PLAY_MEDIA",
+            "candidate_intent": "PLAY_MEDIA",
+            "score": 0.8854,
+            "margin": 0.8678,
+            "source": "model",
+            "status": "ok",
+            "entities": {
+              "title": "Interstellar"
+            },
+            "message": "Resolve this title against the local media library before playback."
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Arabic local song playback",
+      "input": "شغل أغنية تملي معاك",
+      "expected_intent": "PLAY_MEDIA",
+      "actual_intents": [
+        "PLAY_MEDIA"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "شغل أغنية تملي معاك",
+        "actions": [
+          {
+            "text": "شغل أغنية تملي معاك",
+            "intent": "PLAY_MEDIA",
+            "candidate_intent": "PLAY_MEDIA",
+            "score": 0.8017,
+            "margin": 0.7749,
+            "source": "model",
+            "status": "ok",
+            "entities": {
+              "title": "تملي معاك"
+            },
+            "message": "Resolve this title against the local media library before playback."
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Explicit YouTube playback search",
+      "input": "Play Interstellar on YouTube",
+      "expected_intent": "SEARCH_YOUTUBE",
+      "actual_intents": [
+        "SEARCH_YOUTUBE"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Play Interstellar on YouTube",
+        "actions": [
+          {
+            "text": "Play Interstellar on YouTube",
+            "intent": "SEARCH_YOUTUBE",
+            "candidate_intent": "SEARCH_YOUTUBE",
+            "score": 1.0,
+            "margin": null,
+            "source": "rule",
+            "status": "ok",
+            "entities": {
+              "query": "Interstellar",
+              "browser": "firefox",
+              "url": "https://www.youtube.com/results?search_query=Interstellar"
+            },
+            "message": "Open Firefox to YouTube search results; the user selects the desired result."
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "File target extraction",
+      "input": "Locate my project PDF",
+      "expected_intent": "SEARCH_FILE",
+      "actual_intents": [
+        "SEARCH_FILE"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Locate my project PDF",
+        "actions": [
+          {
+            "text": "Locate my project PDF",
+            "intent": "SEARCH_FILE",
+            "candidate_intent": "SEARCH_FILE",
+            "score": 0.9108,
+            "margin": 0.8974,
+            "source": "model",
+            "status": "ok",
+            "entities": {
+              "query": "project PDF"
+            }
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Folder target extraction",
+      "input": "Create a folder called Semester 4",
+      "expected_intent": "CREATE_FOLDER",
+      "actual_intents": [
+        "CREATE_FOLDER"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Create a folder called Semester 4",
+        "actions": [
+          {
+            "text": "Create a folder called Semester 4",
+            "intent": "CREATE_FOLDER",
+            "candidate_intent": "CREATE_FOLDER",
+            "score": 0.9483,
+            "margin": 0.937,
+            "source": "model",
+            "status": "ok",
+            "entities": {
+              "folder_name": "Semester 4"
+            }
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Folder parent extraction",
+      "input": "Create a folder in Documents called Notes",
+      "expected_intent": "CREATE_FOLDER",
+      "actual_intents": [
+        "CREATE_FOLDER"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Create a folder in Documents called Notes",
+        "actions": [
+          {
+            "text": "Create a folder in Documents called Notes",
+            "intent": "CREATE_FOLDER",
+            "candidate_intent": "CREATE_FOLDER",
+            "score": 0.8367,
+            "margin": 0.7762,
+            "source": "model",
+            "status": "ok",
+            "entities": {
+              "folder_name": "Notes",
+              "parent_folder": "Documents"
+            }
+          }
+        ],
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Missing folder name clarification",
+      "input": "Create a new folder",
+      "expected_intent": "CREATE_FOLDER",
+      "actual_intents": [
+        "CREATE_FOLDER"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Create a new folder",
+        "actions": [
+          {
+            "text": "Create a new folder",
+            "intent": "CREATE_FOLDER",
+            "candidate_intent": "CREATE_FOLDER",
+            "score": 0.9243,
+            "margin": 0.9044,
+            "source": "model",
+            "status": "needs_clarification",
+            "entities": {},
+            "message": "What should the new folder be called?"
+          }
+        ],
+        "status": "needs_review"
+      }
+    },
+    {
+      "name": "Unsupported request",
+      "input": "Tell me a joke",
+      "expected_intent": "UNKNOWN",
+      "actual_intents": [
+        "UNKNOWN"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Tell me a joke",
+        "actions": [
+          {
+            "text": "Tell me a joke",
+            "intent": "UNKNOWN",
+            "candidate_intent": "UNKNOWN",
+            "score": 0.8314,
+            "margin": 0.8079,
+            "source": "model",
+            "status": "unknown",
+            "entities": {}
+          }
+        ],
+        "status": "needs_review"
+      }
+    },
+    {
+      "name": "Compound command",
+      "input": "Open Firefox and search YouTube for rock and roll",
+      "expected_intent": "OPEN_APP",
+      "actual_intents": [
+        "OPEN_APP",
+        "SEARCH_YOUTUBE"
+      ],
+      "passed": true,
+      "output": {
+        "raw_text": "Open Firefox and search YouTube for rock and roll",
+        "actions": [
+          {
+            "text": "Open Firefox",
+            "intent": "OPEN_APP",
+            "candidate_intent": "OPEN_APP",
+            "score": 0.8563,
+            "margin": 0.8086,
+            "source": "model",
+            "status": "ok",
+            "entities": {
+              "application_query": "Firefox",
+              "application": "Firefox",
+              "desktop_id": "firefox.desktop"
+            },
+            "application_resolution": {
+              "status": "found",
+              "query": "Firefox",
+              "display_name": "Firefox",
+              "desktop_id": "firefox.desktop",
+              "score": 1.0,
+              "desktop_file": "/mock/firefox.desktop"
+            }
+          },
+          {
+            "text": "search YouTube for rock and roll",
+            "intent": "SEARCH_YOUTUBE",
+            "candidate_intent": "SEARCH_YOUTUBE",
+            "score": 1.0,
+            "margin": null,
+            "source": "rule",
+            "status": "ok",
+            "entities": {
+              "query": "rock and roll",
+              "browser": "firefox",
+              "url": "https://www.youtube.com/results?search_query=rock+and+roll"
+            },
+            "message": "Open Firefox to YouTube search results; the user selects the desired result."
+          }
+        ],
+        "status": "ok"
+      }
+    }
+  ],
+  "parser_smoke_all_passed": true,
+  "url_round_trip_tests": [
+    {
+      "query": "rock and roll",
+      "round_trip": true,
+      "decoded": [
+        "rock and roll"
+      ]
+    },
+    {
+      "query": "C++ pointers and references",
+      "round_trip": true,
+      "decoded": [
+        "C++ pointers and references"
+      ]
+    },
+    {
+      "query": "Linux; permissions & ownership",
+      "round_trip": true,
+      "decoded": [
+        "Linux; permissions & ownership"
+      ]
+    },
+    {
+      "query": "شرح التفاضل والتكامل",
+      "round_trip": true,
+      "decoded": [
+        "شرح التفاضل والتكامل"
+      ]
+    },
+    {
+      "query": "مقارنة بين SQL و Python",
+      "round_trip": true,
+      "decoded": [
+        "مقارنة بين SQL و Python"
+      ]
+    },
+    {
+      "query": "café & crème brûlée",
+      "round_trip": true,
+      "decoded": [
+        "café & crème brûlée"
+      ]
+    }
+  ],
+  "url_round_trip_all_passed": true,
+  "limitations": [
+    "The independent evaluation contains 40 manually curated text commands, not independently collected microphone transcripts.",
+    "A random row split may be optimistic because template-generated phrases can share structure.",
+    "Firefox application data are mocked in parser smoke tests.",
+    "No Ubuntu operation or shell command is executed by this evaluator."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "CHANGE_VOLUME": "Change or mute/unmute system volume.",
+  "CLOSE_APP": "Close a supported application.",
+  "CREATE_FOLDER": "Create a named folder after validating its name and parent path.",
+  "GET_CPU": "Report CPU/processor utilization.",
+  "GET_DISK": "Report available disk/storage space.",
+  "GET_RAM": "Report RAM/memory utilization.",
+  "LOCK_SCREEN": "Lock the current desktop session.",
+  "OPEN_APP": "Open a supported installed application.",
+  "OPEN_FOLDER": "Open a known user folder.",
+  "OPEN_YOUTUBE": "Open the YouTube homepage.",
+  "PLAY_MEDIA": "Resolve a title against the local music/movie library and play only after validation.",
+  "SEARCH_FILE": "Search approved filesystem locations for a file/query.",
+  "SEARCH_YOUTUBE": "Open YouTube search results for a free-text topic.",
+  "SHUTDOWN": "Shut down the computer; requires security policy and confirmation.",
+  "UNKNOWN": "A request not supported by the intent set or rejected as unknown."
+}

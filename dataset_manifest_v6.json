@@ -1,0 +1,27 @@
+{
+  "project": "Voice Ubuntu NLP",
+  "version": "v6",
+  "source_dataset_rows_v5": 315,
+  "expanded_dataset_rows": 1348,
+  "intent_count": 15,
+  "intent_counts": {
+    "CHANGE_VOLUME": 88,
+    "CLOSE_APP": 90,
+    "CREATE_FOLDER": 90,
+    "GET_CPU": 90,
+    "GET_DISK": 90,
+    "GET_RAM": 90,
+    "LOCK_SCREEN": 89,
+    "OPEN_APP": 90,
+    "OPEN_FOLDER": 90,
+    "OPEN_YOUTUBE": 83,
+    "PLAY_MEDIA": 90,
+    "SEARCH_FILE": 90,
+    "SEARCH_YOUTUBE": 98,
+    "SHUTDOWN": 90,
+    "UNKNOWN": 90
+  },
+  "independent_eval_examples": 40,
+  "independent_eval_policy": "independent_eval_v6.csv is kept separate and never used for model training",
+  "dataset_note": "Expanded data includes curated bilingual phrases and carefully generated command template variants. Metrics must be interpreted as preliminary; independent real user transcripts are still needed."
+}
